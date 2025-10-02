@@ -3,65 +3,187 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Chatterley Downloads</title>
+  <title>Download Chatterley</title>
+  <meta name="description" content="Download Chatterley for macOS, Windows, and Linux" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
   <header>
-    <a href="./"><img src="../frontend/chatterley/public/images/chatterley-logo.png" alt="Chatterley" /></a>
-  </header>
-  <main class="container">
-    <h1>Downloads</h1>
-    <p>Production installers are published via GitHub Releases. Use the links below once a release is created.</p>
-
-    <div class="grid" style="margin-top:16px">
-      <div class="card">
-        <h3>macOS</h3>
-        <ul>
-          <li>Download: <a href="https://github.com/chatterley-ai/chatterley/releases">Releases</a></li>
-          <li>Build locally:
-            <pre><code>cd frontend/chatterley
-npm install
-npm run dist:mac</code></pre>
-          </li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Windows</h3>
-        <ul>
-          <li>Download: <a href="https://github.com/chatterley-ai/chatterley/releases">Releases</a></li>
-          <li>Build locally:
-            <pre><code>cd frontend\chatterley
-npm install
-npm run dist:win</code></pre>
-          </li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Linux</h3>
-        <ul>
-          <li>Download: <a href="https://github.com/chatterley-ai/chatterley/releases">Releases</a></li>
-          <li>Build locally:
-            <pre><code>cd frontend/chatterley
-npm install
-npm run dist:linux</code></pre>
-          </li>
-        </ul>
-      </div>
+    <div class="container">
+      <nav>
+        <a href="./" class="logo">
+          <img src="./assets/chatterley-logo.png" alt="Chatterley" />
+          <span>Chatterley</span>
+        </a>
+        <div class="nav-links">
+          <a href="./#features">Features</a>
+          <a href="./#philosophy">Philosophy</a>
+          <a href="https://github.com/chatterley-ai/chatterley">GitHub</a>
+          <a href="./downloads.html" class="btn-download">Download</a>
+        </div>
+      </nav>
     </div>
+  </header>
 
-    <section class="card" style="margin-top:16px">
-      <h2>Backend (Docker)</h2>
-      <pre><code>cd backend/oumi
-docker build -t chatterley-oumi .
-docker run --rm -p 9000:9000 chatterley-oumi \
-  python -m oumi.webchat.server --host 0.0.0.0 --port 9000</code></pre>
+  <main>
+    <section class="downloads-hero">
+      <div class="container">
+        <h1>Download Chatterley</h1>
+        <p class="hero-subtitle">Version 0.1.0 • Alpha Release</p>
+      </div>
     </section>
 
+    <section class="downloads-section">
+      <div class="container">
+        <div class="downloads-grid">
+          <!-- macOS -->
+          <div class="download-card">
+            <div class="platform-header">
+              <div class="platform-icon">🍎</div>
+              <div>
+                <h2>macOS</h2>
+                <p class="platform-subtitle">Apple Silicon (M1/M2/M3)</p>
+              </div>
+            </div>
+            <div class="download-links">
+              <a href="https://github.com/chatterley-ai/chatterley/releases/download/v0.1.0/Chatterley-0.1.0-mac-arm64.dmg" class="btn btn-primary download-btn">
+                <span class="download-icon">⬇️</span>
+                Download DMG
+                <span class="file-size">~500 MB</span>
+              </a>
+              <p class="download-note">For macOS 11.0 (Big Sur) or later</p>
+            </div>
+            <details class="install-instructions">
+              <summary>Installation Instructions</summary>
+              <ol>
+                <li>Download the .dmg file</li>
+                <li>Open the downloaded file</li>
+                <li>Drag Chatterley to Applications folder</li>
+                <li>Open Chatterley from Applications</li>
+                <li><strong>Important:</strong> The app is currently unsigned. If macOS prevents you from opening it, open Terminal and run:
+                  <pre><code>xattr -cr /Applications/Chatterley.app</code></pre>
+                  Then try opening Chatterley again from Applications.
+                </li>
+              </ol>
+              <div class="warning-note">
+                ⚠️ <strong>Note:</strong> This is an unsigned application. Future releases will include code signing to eliminate this step.
+              </div>
+            </details>
+          </div>
+
+          <!-- Windows -->
+          <div class="download-card">
+            <div class="platform-header">
+              <div class="platform-icon">🪟</div>
+              <div>
+                <h2>Windows</h2>
+                <p class="platform-subtitle">64-bit (x64)</p>
+              </div>
+            </div>
+            <div class="download-links">
+              <a href="https://github.com/chatterley-ai/chatterley/releases/download/v0.1.0/Chatterley-0.1.0-win-x64.exe" class="btn btn-primary download-btn">
+                <span class="download-icon">⬇️</span>
+                Download Installer
+                <span class="file-size">~500 MB</span>
+              </a>
+              <p class="download-note">For Windows 10 or later</p>
+            </div>
+            <details class="install-instructions">
+              <summary>Installation Instructions</summary>
+              <ol>
+                <li>Download the .exe installer</li>
+                <li>Run the installer</li>
+                <li>Follow the installation wizard</li>
+                <li>Launch Chatterley from Start Menu</li>
+                <li>If Windows Defender shows a warning, click "More info" → "Run anyway"</li>
+              </ol>
+            </details>
+          </div>
+
+          <!-- Linux -->
+          <div class="download-card">
+            <div class="platform-header">
+              <div class="platform-icon">🐧</div>
+              <div>
+                <h2>Linux</h2>
+                <p class="platform-subtitle">amd64 / arm64</p>
+              </div>
+            </div>
+            <div class="download-links">
+              <a href="https://github.com/chatterley-ai/chatterley/releases/download/v0.1.0/Chatterley-0.1.0-linux-amd64.deb" class="btn btn-primary download-btn">
+                <span class="download-icon">⬇️</span>
+                Download DEB (amd64)
+                <span class="file-size">~500 MB</span>
+              </a>
+              <a href="https://github.com/chatterley-ai/chatterley/releases/download/v0.1.0/Chatterley-0.1.0-linux-arm64.deb" class="btn btn-secondary download-btn">
+                <span class="download-icon">⬇️</span>
+                Download DEB (arm64)
+                <span class="file-size">~500 MB</span>
+              </a>
+              <p class="download-note">For Ubuntu/Debian-based distributions</p>
+            </div>
+            <details class="install-instructions">
+              <summary>Installation Instructions</summary>
+              <ol>
+                <li>Download the appropriate .deb file for your architecture</li>
+                <li>Open terminal in download directory</li>
+                <li>Install: <code>sudo dpkg -i Chatterley-0.1.0-linux-*.deb</code></li>
+                <li>Fix dependencies if needed: <code>sudo apt-get install -f</code></li>
+                <li>Launch from applications menu or run <code>chatterley</code> in terminal</li>
+              </ol>
+            </details>
+          </div>
+        </div>
+
+        <!-- System Requirements -->
+        <section class="requirements-section">
+          <h2>System Requirements</h2>
+          <div class="requirements-grid">
+            <div class="requirement-card">
+              <h3>Minimum</h3>
+              <ul>
+                <li><strong>RAM:</strong> 8 GB</li>
+                <li><strong>Storage:</strong> 10 GB free space</li>
+                <li><strong>CPU:</strong> Multi-core processor (4+ cores recommended)</li>
+                <li><strong>GPU:</strong> Optional (enables faster inference for local models)</li>
+              </ul>
+            </div>
+            <div class="requirement-card">
+              <h3>Recommended</h3>
+              <ul>
+                <li><strong>RAM:</strong> 16 GB or more</li>
+                <li><strong>Storage:</strong> 50 GB+ free space (for model storage)</li>
+                <li><strong>GPU:</strong> NVIDIA GPU with 8+ GB VRAM (for local models)</li>
+                <li><strong>Internet:</strong> Required for initial setup and API-based models</li>
+              </ul>
+            </div>
+          </div>
+          <p class="requirements-note">
+            💡 <strong>Note:</strong> Larger models (13B+) require more RAM and a compatible GPU for optimal performance. 7B models typically need ~8 GB RAM minimum.
+          </p>
+        </section>
+
+        <!-- Additional Info -->
+        <section class="additional-info">
+          <div class="info-card">
+            <h3>🔗 All Releases</h3>
+            <p>View all available versions and release notes on GitHub:</p>
+            <a href="https://github.com/chatterley-ai/chatterley/releases" class="btn btn-secondary">View All Releases</a>
+          </div>
+          <div class="info-card">
+            <h3>🛠️ Build from Source</h3>
+            <p>Want to build Chatterley yourself? Follow the instructions in our repository:</p>
+            <a href="https://github.com/chatterley-ai/chatterley#readme" class="btn btn-secondary">Build Instructions</a>
+          </div>
+        </section>
+      </div>
+    </section>
   </main>
+
   <footer>
-    <p>© Chatterley • Powered by Oumi</p>
+    <div class="container">
+      <p>© 2025 Chatterley • Licensed under Apache 2.0 • Powered by <a href="https://oumi.ai">Oumi</a></p>
+    </div>
   </footer>
 </body>
 </html>
-

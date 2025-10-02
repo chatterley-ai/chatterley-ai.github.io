@@ -439,6 +439,238 @@ footer a {
   color: var(--accent);
 }
 
+/* Downloads Page */
+.downloads-hero {
+  padding: 60px 0 40px;
+  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg) 100%);
+  text-align: center;
+}
+
+.downloads-hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.downloads-section {
+  padding: 40px 0 80px;
+}
+
+.downloads-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.download-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.download-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px var(--shadow);
+}
+
+.platform-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.platform-icon {
+  font-size: 48px;
+}
+
+.platform-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--fg);
+}
+
+.platform-subtitle {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 4px 0 0 0;
+}
+
+.download-links {
+  margin-bottom: 20px;
+}
+
+.download-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 14px 20px;
+}
+
+.download-icon {
+  font-size: 18px;
+}
+
+.file-size {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-left: auto;
+}
+
+.download-note {
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+  margin: 8px 0 0 0;
+}
+
+.install-instructions {
+  margin-top: 20px;
+  padding: 16px;
+  background: var(--bg);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.install-instructions summary {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  cursor: pointer;
+  user-select: none;
+}
+
+.install-instructions summary:hover {
+  color: var(--accent-hover);
+}
+
+.install-instructions ol {
+  margin-top: 12px;
+  padding-left: 20px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.install-instructions li {
+  margin: 8px 0;
+}
+
+.install-instructions code {
+  font-size: 12px;
+  padding: 2px 6px;
+}
+
+.install-instructions pre {
+  margin: 8px 0;
+}
+
+.warning-note {
+  margin-top: 16px;
+  padding: 12px;
+  background: rgba(255, 159, 67, 0.1);
+  border: 1px solid rgba(255, 159, 67, 0.3);
+  border-radius: 6px;
+  color: #ffb366;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.requirements-section {
+  margin-top: 60px;
+  padding-top: 60px;
+  border-top: 1px solid var(--border);
+}
+
+.requirements-section h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.requirements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.requirement-card {
+  background: var(--card-bg);
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.requirement-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--accent);
+}
+
+.requirement-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.requirement-card li {
+  padding: 8px 0;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+}
+
+.requirement-card li:last-child {
+  border-bottom: none;
+}
+
+.requirements-note {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.additional-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.info-card {
+  background: var(--card-bg);
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+.info-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--fg);
+}
+
+.info-card p {
+  color: var(--muted);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero .container {
