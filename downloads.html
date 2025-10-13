@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Download Chatterley</title>
-  <meta name="description" content="Download Chatterley for macOS" />
+  <meta name="description" content="Download Chatterley for macOS, Windows, and Linux" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
@@ -56,6 +56,7 @@
             <details class="install-instructions">
               <summary>Installation Instructions</summary>
               <ol>
+                <li>Install <a href="https://github.com/Kitware/CMake/releases/download/v4.1.2/cmake-4.1.2-macos-universal.dmg" target="_blank" rel="noopener noreferrer">CMake for macOS</a>.</li>
                 <li>Download the .dmg file</li>
                 <li>Open the downloaded file</li>
                 <li>Drag Chatterley to Applications folder</li>
@@ -67,6 +68,68 @@
               </ol>
               <div class="warning-note">
                 ⚠️ <strong>Note:</strong> This is an unsigned application. Future releases will include code signing to eliminate this step.
+              </div>
+            </details>
+          </div>
+
+          <!-- Windows -->
+          <div class="download-card">
+            <div class="platform-header">
+              <div class="platform-icon">🪟</div>
+              <div>
+                <h2>Windows</h2>
+                <p class="platform-subtitle">Windows 11 / Windows 10 (64-bit)</p>
+              </div>
+            </div>
+            <div class="download-links">
+              <a href="https://github.com/chatterley-ai/chatterley/releases/download/v0.1.0/Chatterley-0.1.0-win-x64.exe" class="btn btn-primary download-btn">
+                <span class="download-icon">⬇️</span>
+                Download Installer
+                <span class="file-size">~650 MB</span>
+              </a>
+              <p class="download-note">Requires Windows 10 (21H2+) or Windows 11 (64-bit)</p>
+            </div>
+            <details class="install-instructions">
+              <summary>Installation Instructions</summary>
+              <ol>
+                <li>Install <a href="https://github.com/git-for-windows/git/releases/download/v2.51.0.windows.2/Git-2.51.0.2-64-bit.exe" target="_blank" rel="noopener noreferrer">Git for Windows 2.51.0.2</a> and accept the defaults.</li>
+                <li>Download the Chatterley installer.</li>
+                <li>Run the installer and follow the prompts.</li>
+                <li>Launch Chatterley from the Start menu.</li>
+              </ol>
+              <div class="warning-note">
+                💡 <strong>Tip:</strong> Allow the installer to complete Python environment setup on first run for the smoothest experience.
+              </div>
+            </details>
+          </div>
+
+          <!-- Linux -->
+          <div class="download-card">
+            <div class="platform-header">
+              <div class="platform-icon">🐧</div>
+              <div>
+                <h2>Linux</h2>
+                <p class="platform-subtitle">Ubuntu 22.04+ / Debian-based</p>
+              </div>
+            </div>
+            <div class="download-links">
+              <a href="https://github.com/chatterley-ai/chatterley/releases/download/v0.1.0/Chatterley-0.1.0-linux-amd64.deb" class="btn btn-primary download-btn">
+                <span class="download-icon">⬇️</span>
+                Download DEB
+                <span class="file-size">~650 MB</span>
+              </a>
+              <p class="download-note">Tested on Ubuntu 22.04 LTS (amd64)</p>
+            </div>
+            <details class="install-instructions">
+              <summary>Installation Instructions</summary>
+              <ol>
+                <li>Install <a href="https://developer.nvidia.com/cuda-12-8-0-download-archive" target="_blank" rel="noopener noreferrer">CUDA Toolkit 12.8</a> for your distribution.</li>
+                <li>Download the <code>.deb</code> package.</li>
+                <li>Install with <code>sudo apt install ./Chatterley-0.1.0-linux-amd64.deb</code>.</li>
+                <li>Launch Chatterley from your application launcher.</li>
+              </ol>
+              <div class="warning-note">
+                ⚠️ <strong>Note:</strong> Ensure your NVIDIA drivers match CUDA Toolkit 12.8 for GPU acceleration.
               </div>
             </details>
           </div>
@@ -99,6 +162,33 @@
           <p class="requirements-note">
             💡 <strong>Note:</strong> Larger models (13B+) require more RAM and a compatible GPU for optimal performance. 7B models typically need ~8 GB RAM minimum.
           </p>
+          <h3>Recommended Systems by Platform</h3>
+          <div class="requirements-grid">
+            <div class="requirement-card">
+              <h3>macOS</h3>
+              <ul>
+                <li>M1, M2, M3, or M4 Apple Silicon</li>
+                <li>16 GB RAM or more</li>
+                <li>macOS 13 Ventura or newer</li>
+              </ul>
+            </div>
+            <div class="requirement-card">
+              <h3>Windows</h3>
+              <ul>
+                <li>AMD64 compatible CPU</li>
+                <li>CUDA-compatible GPU with ≥8 GB VRAM</li>
+                <li>Driver stack compatible with CUDA Toolkit 12.8</li>
+              </ul>
+            </div>
+            <div class="requirement-card">
+              <h3>Linux</h3>
+              <ul>
+                <li>AMD64 compatible CPU</li>
+                <li>CUDA-compatible GPU with ≥8 GB VRAM</li>
+                <li>GPU architecture supported by CUDA Toolkit 12.8</li>
+              </ul>
+            </div>
+          </div>
         </section>
 
         <!-- Additional Info -->
@@ -112,6 +202,11 @@
             <h3>🛠️ Build from Source</h3>
             <p>Want to build Chatterley yourself? Follow the instructions in our repository:</p>
             <a href="https://github.com/chatterley-ai/chatterley#readme" class="btn btn-secondary">Build Instructions</a>
+          </div>
+          <div class="info-card">
+            <h3>🤗 HuggingFace Token</h3>
+            <p>For best results, register a free HuggingFace account, create a read token, and add it in Chatterley’s Settings after installation but before loading a local model.</p>
+            <a href="https://huggingface.co/docs/hub/en/security-tokens" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Get a HuggingFace Token</a>
           </div>
         </section>
       </div>
